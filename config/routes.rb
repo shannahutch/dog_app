@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'dogs/index'
+
+  devise_for :users
+
+  resources :dogs
+
+  root 'dogs#index' 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

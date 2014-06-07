@@ -1,0 +1,17 @@
+<h1>All the Dogs</h1>
+<p>Find me in app/views/dogs/index.html.erb</p>
+
+<%= @dogs.each do |dog| %>
+  <%=dog.type %><br>
+  <%= dog.description %><br>
+  <%= link_to 'Edit', edit_dog_path(dog) %> <br>
+
+  <%= link_to 'Delete', dog_path(dog.id), method: :delete %>
+  <!-- #link_to normally automatically to get requests so you have to chenge the #method to delete -->
+   <br>
+
+
+
+<% end %>
+<br>
+<%= link_to 'Make a New dog', new_dog_path %>
