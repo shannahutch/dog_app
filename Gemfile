@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
+
+gem 'devise'
+gem 'bootstrap-sass'
+gem 'bootstrap-generators'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,6 +29,23 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+
+group :development do 
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'meta_request'
+  gem 'binding_of_caller'
+  gem 'awesome_print'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'forgery'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '2.99'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
